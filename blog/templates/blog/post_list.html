@@ -1,6 +1,8 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>Django Girls blog</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
     </head>
     <body>
 
@@ -14,6 +16,7 @@
         <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
+
     </div>
 {% endfor %}
 
